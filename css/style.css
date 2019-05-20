@@ -86,7 +86,7 @@ body {
 .heading-tertiary {
   font-size: 1.6rem;
   font-weight: 700;
-  transform: uppercase; }
+  text-transform: uppercase; }
 
 .paragraph {
   font-size: 1.4rem; }
@@ -319,6 +319,52 @@ body {
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
 
+.story {
+  width: 85%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 8rem;
+  font-size: 1.6rem;
+  transform: skewX(-12deg); }
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative; }
+  .story__img {
+    height: 100%;
+    transform: translateX(-3.4rem) scale(1.1);
+    backface-visitbility: hidden;
+    transition: all .5s; }
+  .story__text {
+    transform: skewX(12deg); }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    text-transform: 50%;
+    font-size: 1.7rem;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visitbility: hidden; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__img {
+    transform: translateX(-3.4rem) scale(1);
+    filter: blur(3px) brightness(80%); }
+
 .row {
   max-width: 96rem;
   margin: 0 auto; }
@@ -384,3 +430,7 @@ body {
   background-color: #f7f7f7;
   padding: 28rem 16rem 16rem 16rem;
   margin-top: -20vh; }
+
+.section-stories {
+  padding: 15rem 0;
+  background-color: #f7f7f7; }
